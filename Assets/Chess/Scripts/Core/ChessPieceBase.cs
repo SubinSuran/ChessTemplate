@@ -1,10 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ChessPieceBase : MonoBehaviour
 {
-    public int row, col;
+    public string teamColor; // "White" or "Black"
+    public int row;
+    public int col;
     public bool hasMoved = false;
-    public string teamColor; // white or black
+
+    public IMoveProvider moveProvider;
+
+    public List<Vector2Int> GetMoves()
+    {
+        return moveProvider?.GetValidMoves(this) ?? new List<Vector2Int>();
+    }
 }
