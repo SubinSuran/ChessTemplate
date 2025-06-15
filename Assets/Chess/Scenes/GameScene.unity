@@ -323,7 +323,6 @@ GameObject:
   - component: {fileID: 60290584}
   - component: {fileID: 60290585}
   - component: {fileID: 60290586}
-  - component: {fileID: 60290587}
   m_Layer: 0
   m_Name: Queen
   m_TagString: Black
@@ -445,25 +444,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 60290581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e1b5cae9b8ef794eb9bd55aeb62fdb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 97a9defa99ab7a84f8b7a027b5e39d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &60290587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60290581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 3
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &81620425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f3d5f23429045a4cb4c88de8f787398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rowsArray:
+  row_prefabs:
   - {fileID: 1782151836}
   - {fileID: 4256637}
   - {fileID: 348273158}
@@ -1100,7 +1087,8 @@ MonoBehaviour:
   - {fileID: 1795648441}
   - {fileID: 1457761172}
   - {fileID: 209010543}
-  _highlightPrefab: {fileID: 3575455442422821219, guid: 63e242f84ee31dd49b18bb41b8d1c522, type: 3}
+  piecePrefabs: []
+  pieceParent: {fileID: 0}
 --- !u!1 &280411635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,13 +1236,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 280411635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8f28407f71457438dbbd439d9f0360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 7
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &283930264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,13 +1511,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 294491492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 97a9defa99ab7a84f8b7a027b5e39d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 3
   hasMoved: 0
-  teamColor: White
 --- !u!1 &305474383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,13 +1766,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 309589163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 3
   hasMoved: 0
-  teamColor: Black
 --- !u!1001 &348273156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2082,6 +2070,7 @@ GameObject:
   - component: {fileID: 354243242}
   - component: {fileID: 354243243}
   - component: {fileID: 354243244}
+  - component: {fileID: 354243245}
   m_Layer: 0
   m_Name: Bishop
   m_TagString: Black
@@ -2218,10 +2207,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 2
   hasMoved: 0
+--- !u!114 &354243245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354243238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6a9ca4b2a020d4596a5b78ad3e28d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   teamColor: Black
+  row: 7
+  col: 2
+  hasMoved: 0
 --- !u!1 &361327009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,7 +2508,6 @@ GameObject:
   - component: {fileID: 409402679}
   - component: {fileID: 409402681}
   - component: {fileID: 409402682}
-  - component: {fileID: 409402683}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Black
@@ -2625,25 +2629,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 409402677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b3c708a0dfaa7b468ea6fec5a782ce4, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &409402683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409402677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 1
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &418959813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,7 +2783,6 @@ GameObject:
   - component: {fileID: 436799128}
   - component: {fileID: 436799129}
   - component: {fileID: 436799130}
-  - component: {fileID: 436799131}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Black
@@ -2913,25 +2904,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 436799125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b3c708a0dfaa7b468ea6fec5a782ce4, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &436799131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436799125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 0
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &439717610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,7 +2943,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1480919550}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &439717612
 MonoBehaviour:
@@ -3066,13 +3045,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 439717610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 3
   hasMoved: 0
-  teamColor: White
 --- !u!1 &451512796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,13 +3186,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 451512796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: d613fa321cc828740b5695a4f5a6ced3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 4
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,13 +3704,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 705163946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 0
   hasMoved: 0
-  teamColor: White
 --- !u!1 &751211343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3770,6 @@ GameObject:
   - component: {fileID: 755527377}
   - component: {fileID: 755527378}
   - component: {fileID: 755527379}
-  - component: {fileID: 755527380}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Black
@@ -3913,25 +3891,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 755527374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0679c541976cc746bc9d359198f977f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c867f2e556c40b4d8a57f7fcbb3659c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &755527380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755527374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 6
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &767051687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,13 +4032,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 767051687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 7
   hasMoved: 0
-  teamColor: White
 --- !u!1 &877052905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,13 +4307,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 917979049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8f28407f71457438dbbd439d9f0360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 7
   hasMoved: 0
-  teamColor: White
 --- !u!1 &969461835
 GameObject:
   m_ObjectHideFlags: 0
@@ -4495,13 +4461,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 969461835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 7
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1009644909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,7 +4634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1480919550}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1057125480
 MonoBehaviour:
@@ -4770,13 +4736,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1057125478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 4
   hasMoved: 0
-  teamColor: White
 --- !u!1 &1070355534
 GameObject:
   m_ObjectHideFlags: 0
@@ -4911,13 +4877,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070355534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: d613fa321cc828740b5695a4f5a6ced3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 4
   hasMoved: 0
-  teamColor: White
 --- !u!1 &1126575665
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,13 +5031,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1126575665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 4
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1148948110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,13 +5306,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218282656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 6
   hasMoved: 0
-  teamColor: White
 --- !u!1001 &1224059647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5566,7 +5532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1480919550}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1231005034
 MonoBehaviour:
@@ -5668,13 +5634,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231005032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 2
   hasMoved: 0
-  teamColor: White
 --- !u!1 &1285433203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,6 +5654,7 @@ GameObject:
   - component: {fileID: 1285433206}
   - component: {fileID: 1285433207}
   - component: {fileID: 1285433209}
+  - component: {fileID: 1285433208}
   m_Layer: 0
   m_Name: Bishop
   m_TagString: Black
@@ -5800,6 +5767,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &1285433208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285433203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6a9ca4b2a020d4596a5b78ad3e28d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamColor: Black
+  row: 7
+  col: 5
+  hasMoved: 0
 --- !u!114 &1285433209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5812,10 +5795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 5
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1296952586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5826,6 +5809,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1296952587}
   - component: {fileID: 1296952588}
+  - component: {fileID: 1296952591}
+  - component: {fileID: 1296952590}
+  - component: {fileID: 1296952589}
   m_Layer: 0
   m_Name: ChessGameManager
   m_TagString: Untagged
@@ -5854,9 +5840,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296952586}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53b565c5c693c464fba7bd7f482adfc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTurn: White
+  selectedPiece: {fileID: 0}
+  validMovePositions: []
+--- !u!114 &1296952589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296952586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe982af6e08b0c84688571a38e93d62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1296952590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296952586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8e85369c23b3d499baf6ddd15b2b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1296952591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296952586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6ec0785f3a0f2459a7c9a48c0b8eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1328010219
@@ -6006,7 +6031,6 @@ GameObject:
   - component: {fileID: 1342563079}
   - component: {fileID: 1342563080}
   - component: {fileID: 1342563081}
-  - component: {fileID: 1342563082}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Black
@@ -6128,25 +6152,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1342563076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0679c541976cc746bc9d359198f977f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c867f2e556c40b4d8a57f7fcbb3659c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1342563082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342563076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 1
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1440357538
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,13 +6650,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1461403762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b6a9ca4b2a020d4596a5b78ad3e28d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 2
   hasMoved: 0
-  teamColor: White
 --- !u!1 &1480919549
 GameObject:
   m_ObjectHideFlags: 0
@@ -6679,10 +6691,10 @@ Transform:
   - {fileID: 1771314227}
   - {fileID: 1767290145}
   - {fileID: 705163947}
-  - {fileID: 439717611}
   - {fileID: 2060958474}
-  - {fileID: 1057125479}
   - {fileID: 1231005033}
+  - {fileID: 439717611}
+  - {fileID: 1057125479}
   - {fileID: 1863697435}
   - {fileID: 1218282657}
   - {fileID: 767051688}
@@ -6838,13 +6850,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1486999842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 5
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1491303169
 GameObject:
   m_ObjectHideFlags: 0
@@ -7464,13 +7476,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1707383398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 6
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1723691865
 GameObject:
   m_ObjectHideFlags: 0
@@ -7618,13 +7630,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723691865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 6
   col: 2
   hasMoved: 0
-  teamColor: Black
 --- !u!1 &1751631076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,13 +7905,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767290144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c867f2e556c40b4d8a57f7fcbb3659c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 6
   hasMoved: 0
-  teamColor: White
 --- !u!1 &1771314226
 GameObject:
   m_ObjectHideFlags: 0
@@ -8034,13 +8046,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771314226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c867f2e556c40b4d8a57f7fcbb3659c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 1
   hasMoved: 0
-  teamColor: White
 --- !u!1001 &1782151834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8525,13 +8537,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1863697434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 5
   hasMoved: 0
-  teamColor: White
 --- !u!1 &2003609496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8640,13 +8652,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2003609496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8f28407f71457438dbbd439d9f0360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: Black
   row: 7
   col: 0
   hasMoved: 0
-  teamColor: Black
 --- !u!61 &2003609501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8839,7 +8851,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1480919550}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2060958475
 MonoBehaviour:
@@ -8941,13 +8953,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2060958473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 740d533f3ee8c8f4a9064750ee5d522d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 1
   col: 1
   hasMoved: 0
-  teamColor: White
 --- !u!1 &2068596906
 GameObject:
   m_ObjectHideFlags: 0
@@ -9082,13 +9094,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2068596906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b6a9ca4b2a020d4596a5b78ad3e28d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 5
   hasMoved: 0
-  teamColor: White
 --- !u!1 &2099127215
 GameObject:
   m_ObjectHideFlags: 0
@@ -9223,13 +9235,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099127215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb68ec9a1d9c994bb06ad8c62ad3f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8f28407f71457438dbbd439d9f0360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColor: White
   row: 0
   col: 0
   hasMoved: 0
-  teamColor: White
 --- !u!1 &2113069870
 GameObject:
   m_ObjectHideFlags: 0
