@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     private TurnManager turnManager;
     private ChessBoardPlacementHandler boardHighlighter;
 
-    private ChessPiece selectedPiece;
+    public ChessPiece SelectedPiece { get; private set; }
     private List<MoveData> validMovePositions = new List<MoveData>();
 
     private void Awake()
@@ -53,8 +53,8 @@ public class GameController : MonoBehaviour
         }
 
         // Select the piece and get its moves, passing the current board state
-        selectedPiece = piece;
-        validMovePositions = selectedPiece.GetValidMoves(boardHighlighter.GetBoardState());
+        SelectedPiece = piece;
+        validMovePositions = SelectedPiece.GetValidMoves(boardHighlighter.GetBoardState());
 
         // Delegate highlighting to the board highlighter
         boardHighlighter.ClearHighlights();
@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
 
     private void HandleMoveAttempt(int row, int col)
     {
-        if (selectedPiece == null) return;
+        if (SelectedPiece == null) return;
 
         Vector2Int movePos = new Vector2Int(row, col);
 
@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour
         {
             // Tell the board handler to move the piece. This updates the board state array
             // and handles captures.
-            boardHighlighter.MovePieceOnBoard(selectedPiece, row, col);
+            boardHighlighter.MovePieceOnBoard(SelectedPiece, row, col);
 
             turnManager.EndTurn();
         }
@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour
 
     private void ClearSelection()
     {
-        selectedPiece = null;
+        SelectedPiece = null;
         validMovePositions.Clear();
         if (boardHighlighter != null)
         {
